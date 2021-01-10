@@ -1,4 +1,4 @@
-<template>SHOP PAGE
+<template>TEST
 </template>
 
 <script>

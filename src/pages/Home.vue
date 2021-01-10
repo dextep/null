@@ -1,1 +1,9 @@
-HOME PAGE
+<template>HOME PAGE
+</template>
+
+<script>
+export default {
+};
+</script>
+
+<style lang="scss" scoped></style>

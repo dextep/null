@@ -1,26 +1,19 @@
 <template>
-  <router-link to="/">HOME</router-link>
-  <router-link to="/collections/new">SHOP</router-link>
-
+  <template v-for="(item, index) in routes" :key="index">
+    <router-link :to="item.path">{{ item.title }}</router-link>
+  </template>
   <router-view></router-view>
 </template>
 
 <script>
-
+import routes from "@/router";
 export default {
-  name: 'App',
-  components: {
-  }
-}
+  name: "App",
+  components: {},
+  data: () => {
+    return {
+      routes: routes.routes,
+    };
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
