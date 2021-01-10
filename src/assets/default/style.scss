@@ -1,0 +1,8 @@
+html {
+    font-family: $sora;
+    font-size: 62.5%;
+    // overflow-x: hidden; // not working webkit scroll behavior
+    -webkit-overflow-scrolling: touch;
+    background-color: $black-lvl1;
+    color: $white;
+}

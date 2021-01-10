@@ -1,0 +1,60 @@
+// Bootstrap breakpoints
+
+@mixin bp-down-xs {@include media-breakpoint-down(xs){@content}};
+@mixin bp-down-sm {@include media-breakpoint-down(sm){@content}};
+@mixin bp-down-md {@include media-breakpoint-down(md){@content}};
+@mixin bp-down-lg {@include media-breakpoint-down(lg){@content}};
+
+@mixin bp-only-xs {@include media-breakpoint-only(xs){@content}};
+@mixin bp-only-sm {@include media-breakpoint-only(sm){@content}};
+@mixin bp-only-md {@include media-breakpoint-only(md){@content}};
+@mixin bp-only-lg {@include media-breakpoint-only(lg){@content}};
+@mixin bp-only-xl {@include media-breakpoint-only(xl){@content}};
+
+@mixin bp-up-xs {@include media-breakpoint-up(xs){@content}};
+@mixin bp-up-sm {@include media-breakpoint-up(sm){@content}};
+@mixin bp-up-md {@include media-breakpoint-up(md){@content}};
+@mixin bp-up-lg {@include media-breakpoint-up(lg){@content}};
+@mixin bp-up-xl {@include media-breakpoint-up(xl){@content}};
+
+// Bootstrap breakpoints - How to use
+
+// @include bp-down-xs { css for < 576px }
+// @include bp-down-sm { css for < 768px }
+// @include bp-down-md { css for < 992px }
+// @include bp-down-lg { css for < 1200px}
+
+// @include bp-only-xs { css for < 575px }
+// @include bp-only-sm { css for 576px - 767px }
+// @include bp-only-md { css for 768px - 991px}
+// @include bp-only-lg { css for 991px - 1199px}
+// @include bp-only-xl { css for  > 1200px }
+
+// @include bp-up-xs { css for > 0}
+// @include bp-up-sm { css for > 575px}
+// @include bp-up-md { css for > 767px}
+// @include bp-up-lg { css for > 991px}
+// @include bp-up-xl { css for > 1199px}
+
+// Custom breakpoint 
+
+@mixin bp($min, $max: null) {
+
+    @if($max) {
+        $max: $max - 1px; // prevent to overlap breakpoints each other
+
+        @media screen and (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else {
+
+        @media screen and (min-width: $min) {
+            @content;
+        }
+    }
+}
+
+// Custom breakpoint - How to use
+
+// @include bp(1000px, 1500px) {css for 1000px - 1599px}
+// @include bp(1000px) {css for >1000px}

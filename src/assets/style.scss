@@ -1,9 +1,9 @@
 // //Global styles
-// @import "@/Mixins/src/style.scss";
-// @import "@/Variables/src/style.scss";
-// @import "@/Reset/src/style.scss";
-// @import "@/Fonts/src/style.scss";
-// @import "@/Default/src/style.scss";
+@import "./mixins/style.scss";
+@import "./variables/style.scss";
+@import "./reset/style.scss";
+@import "./fonts/style.scss";
+@import "./default/style.scss";
 // @import "@/Default/src/slider.scss";
 
 @import "@/components/ProductCard/src/style.scss";
