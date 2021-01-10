@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
-import Sandbox from "./Sandbox.vue";
+import Sandbox from "./pages/Sandbox.vue";
 import sandboxRouters from "@/sandbox";
 
 const routes = [

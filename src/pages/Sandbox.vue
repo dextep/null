@@ -1,7 +1,7 @@
 <template>
   <div class="sandbox-container">
     <template v-for="(item, index) in routes"  :key="index">
-      <router-link :to="item.path">{{ item.path }}</router-link><br/>
+      <router-link :to="item.path">{{ item.path }}</router-link>
     </template>
   </div>
   <router-view></router-view>
@@ -24,6 +24,8 @@ export default {
 </script>
 <style scoped>
 .sandbox-container {
+  display: flex;
+  flex-direction: column;
     margin: 20px;
 }
 a {
