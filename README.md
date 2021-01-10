@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3c8d34a4-1529-4924-a998-4ee7ec4d2448/deploy-status)](https://app.netlify.com/sites/null-website/deploys)
+
 # null
 
 ## Project setup
