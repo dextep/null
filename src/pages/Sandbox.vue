@@ -1,25 +1,25 @@
 <template>
   <div class="sandbox-container">
-    <template v-for="(item, index) in routes"  :key="index">
+    <!-- <template v-for="(item, index) in routes"  :key="index">
       <router-link :to="item.path">{{ item.path }}</router-link>
-    </template>
+    </template> -->
   </div>
   <router-view></router-view>
 </template>
 
 <script>
 
-import routes from '@/sandbox'
+// import routes from '@/sandbox'
 
 export default {
   name: 'Sandbox',
   components: {
   },
-  data: () => { 
-    return {
-      routes: routes,
-      }
-  }
+  // data: () => { 
+  //   return {
+  //     routes: routes,
+  //     }
+  // }
 }
 </script>
 <style scoped>

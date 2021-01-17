@@ -1,19 +1,19 @@
 <template>
-  <template v-for="(item, index) in routes" :key="index">
-    <router-link :to="item.path">{{ item.title }}</router-link>
-  </template>
+  <navbar :navRoutes="routes" />
   <router-view></router-view>
 </template>
 
 <script>
-import routes from "@/router";
+import routes from "./router";
+import Navbar from "./components/Navbar/src/Navbar.vue";
 export default {
   name: "App",
-  components: {},
   data: () => {
     return {
       routes: routes.routes,
     };
   },
+
+  components: { Navbar },
 };
 </script>
