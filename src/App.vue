@@ -1,6 +1,8 @@
 <template>
   <navbar :navRoutes="routes" />
-  <router-view></router-view>
+  <div class="wrapper">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
