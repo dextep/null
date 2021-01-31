@@ -3,6 +3,7 @@ import Admin from "./pages/Admin.vue";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Sandbox from "./pages/Sandbox.vue";
+import NotFound from "./pages/NotFound.vue";
 import sandboxRouters from "@/sandbox";
 
 const mainRoutes = [
@@ -20,6 +21,12 @@ const subRoutes = [
 ];
 
 const routes = [];
+
+routes.push({
+    path: '/:pathMatch(.*)*', 
+    name: 'not-found', 
+    component: NotFound,
+});
 
 if (process.env.NODE_ENV == "development") {
   routes.push({
