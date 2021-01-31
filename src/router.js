@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import Admin from "./pages/Admin.vue";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import Sandbox from "./pages/Sandbox.vue";
@@ -18,16 +19,22 @@ const subRoutes = [
   { path: "/card", component: Shop, title: "Card" },
 ];
 
+const routes = [];
+
 if (process.env.NODE_ENV == "development") {
-  mainRoutes.push({
+  routes.push({
     path: "/sandbox",
     title: "sandbox",
     component: Sandbox,
     children: sandboxRouters,
   });
+  routes.push({
+    path: "/admin",
+    title: "admin",
+    component: Admin,
+  });
 }
 
-const routes = [];
 mainRoutes.forEach((e) => {
   routes.push(e);
 });
