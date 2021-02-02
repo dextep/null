@@ -1,6 +1,7 @@
 <template>
   <h1>ADMIN PAGE</h1>
 
+  <h1>PRODUCTS</h1>
   <form @submit="onSubmit">
     <input
       type="file"
@@ -27,6 +28,19 @@
       </li>
     </template>
   </ul>
+
+  <h1>HOME SLIDER</h1>
+  <form @submit="onSubmitSlider">
+    <input
+      type="file"
+      accept="image/png, image/jpeg"
+      multiple
+      @change="onFileChangeSlider"
+    />
+    <input type="text" name="title" placeholder="title" value="a" />
+    <input type="text" name="description" placeholder="description" value="a" />
+    <button>Submit</button>
+  </form>
 </template>
 
 <script>
@@ -37,6 +51,7 @@ import "firebase/storage";
 export default {
   data() {
     return {
+      fileSlider: [],
       files: [],
       imgs: [],
       products: {},
@@ -44,6 +59,49 @@ export default {
     };
   },
   methods: {
+    onFileChangeSlider(e) {
+      this.fileSlider = e.target.files;
+    },
+    async onSubmit(e) {
+      e.preventDefault();
+      const title = e.target.title.value;
+      const price = e.target.price.value;
+      try {
+        if (!title || !price || !this.files) {
+          throw "Requied files";
+        }
+        const productRef = this.firestore.collection("products").doc();
+        const storageRef = firebase.storage().ref();
+
+        const imgList = [];
+
+        for (const file of this.files) {
+          const asdx = storageRef.child(
+            "products/" + productRef.id + "/" + file.name
+          );
+          await asdx.put(file);
+          imgList.push({
+            name: file.name,
+            url: await asdx.getDownloadURL(),
+          });
+        }
+
+        await productRef
+          .set({
+            title: title,
+            description: description,
+            imgs: imgList,
+          })
+          .then(function() {
+            console.log("Document successfully written!");
+          })
+          .catch(function(e) {
+            throw e;
+          });
+      } catch (error) {
+        console.error("Error writing document: ", error);
+      }
+    },
     onFileChange(e) {
       this.files = e.target.files;
     },
