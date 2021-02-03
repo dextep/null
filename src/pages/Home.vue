@@ -1,7 +1,6 @@
 <template>
-  <h1>HOME PAGE</h1>
-  <div class="">
-    <swiper-component></swiper-component>
+  <div class="wrapper p-0">
+      <swiper-component></swiper-component>
   </div>
 </template>
 

@@ -62,13 +62,13 @@ export default {
     onFileChangeSlider(e) {
       this.fileSlider = e.target.files;
     },
-    async onSubmit(e) {
+    async onSubmitSlider(e) {
       e.preventDefault();
       const title = e.target.title.value;
-      const price = e.target.price.value;
+      const description = e.target.description.value;
       try {
-        if (!title || !price || !this.files) {
-          throw "Requied files";
+        if (!title || !description) {
+          throw "Requied fields";
         }
         const productRef = this.firestore.collection("products").doc();
         const storageRef = firebase.storage().ref();

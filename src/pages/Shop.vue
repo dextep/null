@@ -1,36 +1,38 @@
 <template>
-  <matrix-scroll>
-    <div class="products-wrapper">
-      <div class="products-col">
-        <template v-for="(product, index) in products" :key="index">
-          <template v-if="index % 4 == 0">
-            <product-card :product="product" />
+  <div class="wrapper">
+    <matrix-scroll>
+      <div class="products-wrapper">
+        <div class="products-col">
+          <template v-for="(product, index) in products" :key="index">
+            <template v-if="index % 4 == 0">
+              <product-card :product="product" />
+            </template>
           </template>
-        </template>
-      </div>
-      <div class="products-col">
-        <template v-for="(product, index) in products" :key="index">
-          <template v-if="index % 4 == 1">
-            <product-card :product="product" />
+        </div>
+        <div class="products-col">
+          <template v-for="(product, index) in products" :key="index">
+            <template v-if="index % 4 == 1">
+              <product-card :product="product" />
+            </template>
           </template>
-        </template>
-      </div>
-      <div class="products-col">
-        <template v-for="(product, index) in products" :key="index">
-          <template v-if="index % 4 == 2">
-            <product-card :product="product" />
+        </div>
+        <div class="products-col">
+          <template v-for="(product, index) in products" :key="index">
+            <template v-if="index % 4 == 2">
+              <product-card :product="product" />
+            </template>
           </template>
-        </template>
-      </div>
-      <div class="products-col">
-        <template v-for="(product, index) in products" :key="index">
-          <template v-if="index % 4 == 3">
-            <product-card :product="product" />
+        </div>
+        <div class="products-col">
+          <template v-for="(product, index) in products" :key="index">
+            <template v-if="index % 4 == 3">
+              <product-card :product="product" />
+            </template>
           </template>
-        </template>
+        </div>
       </div>
-    </div>
-  </matrix-scroll>
+    </matrix-scroll>
+  </div>
 </template>
 
 <script>

@@ -7,24 +7,25 @@
     @swiper="onSwiper"
     @slideChange="onSlideChange"
     :autoplay="{
-        delay: 3000,
-      }"
+        delay: 1000,
+    }"
+    effect="fade"
   >
     <swiper-slide>
-      <div class="" style="width:100%; height: 200px; background: red;"></div>
+      <div class="slider-wrapper" style="background: red;"></div>
     </swiper-slide>
     <swiper-slide>
-      <div class="" style="width:200px; height: 200px; background: green;"></div>
+      <div class="slider-wrapper" style="background: green;"></div>
     </swiper-slide>
     <swiper-slide>
-      <div class="" style="width:200px; height: 200px; background: white;"></div>
+      <div class="slider-wrapper" style="background: white;"></div>
     </swiper-slide>
-    ...
+    
   </swiper>
 </template>
 <script>
   // import Swiper core and required modules
-  import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+  import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade } from 'swiper';
 
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -36,7 +37,7 @@
   import 'swiper/components/scrollbar/scrollbar.scss';
 
   // install Swiper modules
-  SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+  SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]);
 
   // Import Swiper styles
   export default {
