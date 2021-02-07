@@ -1,5 +1,9 @@
 <template>
+<div class="wrapper">
   <h1>ADMIN PAGE</h1>
+<br/>
+<br/>
+<br/>
 
   <h1>PRODUCTS</h1>
   <form @submit="onSubmit">
@@ -28,7 +32,9 @@
       </li>
     </template>
   </ul>
-
+<br/>
+<br/>
+<br/>
   <h1>HOME SLIDER</h1>
   <form @submit="onSubmitSlider">
     <input
@@ -41,6 +47,7 @@
     <input type="text" name="description" placeholder="description" value="a" />
     <button>Submit</button>
   </form>
+  </div>
 </template>
 
 <script>
@@ -51,7 +58,7 @@ import "firebase/storage";
 export default {
   data() {
     return {
-      fileSlider: [],
+      fileSlider: {},
       files: [],
       imgs: [],
       products: {},
@@ -70,27 +77,24 @@ export default {
         if (!title || !description) {
           throw "Requied fields";
         }
-        const productRef = this.firestore.collection("products").doc();
+        const productRef = this.firestore.collection("main_slider").doc();
         const storageRef = firebase.storage().ref();
 
-        const imgList = [];
-
-        for (const file of this.files) {
+        console.log(this.fileSlider[0])
           const asdx = storageRef.child(
-            "products/" + productRef.id + "/" + file.name
+            "main_slider/" + productRef.id + "/" + this.fileSlider[0].name
           );
-          await asdx.put(file);
-          imgList.push({
-            name: file.name,
+          await asdx.put(this.fileSlider[0]);
+         const img = {
+            name: this.fileSlider[0].name,
             url: await asdx.getDownloadURL(),
-          });
-        }
+          };
 
         await productRef
           .set({
             title: title,
             description: description,
-            imgs: imgList,
+            img: img,
           })
           .then(function() {
             console.log("Document successfully written!");
