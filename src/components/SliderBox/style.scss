@@ -1,0 +1,37 @@
+.slider-box {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-flow: row dense;
+    grid-gap: 10px;
+    min-height: 100vh;
+    &__left-item {
+        display: flex;
+        grid-column: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $black-lvl3;
+    }
+    &__right-item {
+        display: flex;
+        grid-column: 2;
+        overflow: hidden;
+        position: relative;
+        img {
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__title {
+        @include h__40-50;
+        color: $white;
+    }
+    &__description {
+        @include h__40-50;
+        color: $white;
+    }
+}

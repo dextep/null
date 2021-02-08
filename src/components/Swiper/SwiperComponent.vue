@@ -7,13 +7,13 @@
     @swiper="onSwiper"
     @slideChange="onSlideChange"
     :autoplay="{
-      delay: 1000,
+      delay: 2000,
     }"
-    :speed="800"
+    :speed="500"
     effect="fade"
     :loop="true"
   >
-    <slot> </slot>
+    <slot></slot>
   </swiper>
 </template>
 <script>
