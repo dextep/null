@@ -3,16 +3,22 @@
   background-color: $black-lvl3;
   &__copyright {
     opacity: 0.6;
+    text-align: center;
     @include text-small;
     font-variation-settings: "wght" 200;
   }
   &__container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+    margin: 0 auto;
     color: #f0f9ff;
+    max-width: 1200px;
     @include h__16-20;
-    padding: 0 50px;
+    @include respond-to('sm') {
+        padding: 0 50px;
+        flex-direction: row;
+    }
   }
   h3 {
     margin-top: 0;
@@ -58,6 +64,8 @@
   }
   &__social-col {
     padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
     a {
       display: inline-block;
       padding: 5px 20px;
