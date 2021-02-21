@@ -7,22 +7,33 @@
             </swiper-slide>
           </template>
       </swiper-component>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
   </div>
 </template>
 
 <script>
-import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/storage";
-import SwiperComponent from "@/components/Swiper/SwiperComponent.vue";
+import { SwiperSlide } from 'swiper/vue';
+import firebase from "firebase/app";
 import SliderBox from "@/components/SliderBox/SliderBox.vue";
-  import { SwiperSlide } from 'swiper/vue';
+import SwiperComponent from "@/components/Swiper/SwiperComponent.vue";
 
 export default {
   components: {
+    SliderBox,
     SwiperComponent,
     SwiperSlide,
-    SliderBox,
   },
   data() {
     return {
