@@ -4,8 +4,6 @@
     :pagination="{
       clickable: true,
     }"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
     :autoplay="{
       delay: 2000,
     }"
@@ -44,10 +42,5 @@ export default {
   components: {
     Swiper,
   },
-  data() {
-    return {};
-  },
-  props: {},
-  methods: {},
 };
 </script>
