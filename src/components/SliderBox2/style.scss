@@ -1,0 +1,37 @@
+.slider-box-2 {
+    img {
+        object-fit: cover;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__box {
+        background-color: rgba($black, 0.5);
+    }
+    &__info-box {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        z-index: 10;
+        mix-blend-mode: difference;
+        color: $white;
+        max-width: 700px;
+    }
+    &__title {
+        @include big;
+        font-variation-settings: "wght" 500;
+        mix-blend-mode: difference;
+        color: $white;
+    }
+    &__desc {
+        @include text-normal;
+        font-variation-settings: "wght" 200;
+        margin: 40px 0;
+        padding-right: 8vw;
+        text-align: justify;
+    }
+}

@@ -3,7 +3,7 @@
       <swiper-component>
           <template v-for="(product, index) in products" :key="index">
             <swiper-slide>
-              <slider-box :data="product" ></slider-box>
+              <slider-box-2 :data="product" ></slider-box-2>
             </swiper-slide>
           </template>
       </swiper-component>
@@ -16,13 +16,13 @@ import "firebase/firestore";
 import "firebase/storage";
 import { SwiperSlide } from 'swiper/vue';
 import firebase from "firebase/app";
-import SliderBox from "@/components/SliderBox/SliderBox.vue";
+import SliderBox2 from "@/components/SliderBox2/SliderBox2.vue";
 import SwiperComponent from "@/components/Swiper/SwiperComponent.vue";
 import Section1 from '../components/Section1/Section1.vue';
 
 export default {
   components: {
-    SliderBox,
+    SliderBox2,
     SwiperComponent,
     SwiperSlide,
     Section1,
