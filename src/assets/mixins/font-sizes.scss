@@ -1,92 +1,24 @@
-@mixin h__60-75 {
-  font-size: 6rem;
-  line-height: 7.5rem;
-}
-@mixin h__46-59 {
-  font-size: 4.6rem;
-  line-height: 5.9rem;
-}
-@mixin h__40-50 {
+@mixin h1 {
   font-size: 4rem;
   line-height: 5rem;
 }
-@mixin h__37-46 {
-  font-size: 3.7rem;
-  line-height: 4.6rem;
-}
-@mixin h__35-45 {
-  font-size: 3.5rem;
-  line-height: 4.5rem;
-}
-@mixin h__30-38 {
-  font-size: 3rem;
-  line-height: 3.8rem;
-}
-@mixin h__28-36 {
-  font-size: 2.8rem;
-  line-height: 3.6rem;
-}
-@mixin h__27-34 {
-  font-size: 2.7rem;
-  line-height: 3.4rem;
-}
-@mixin h__26-23 {
-  font-size: 2.6rem;
-  line-height: 2.3rem;
-}
-@mixin h__25-31 {
-  font-size: 2.5rem;
-  line-height: 3.1rem;
-}
-@mixin h__23-29 {
-  font-size: 2.3rem;
-  line-height: 2.9rem;
-}
-@mixin h__22-28 {
-  font-size: 2.2rem;
-  line-height: 2.8rem;
-}
-@mixin h__21-26 {
-  font-size: 2.1rem;
-  line-height: 2.6rem;
-}
-@mixin h__20-25 {
-  font-size: 2rem;
-  line-height: 2.5rem;
-}
-@mixin h__19-24 {
-  font-size: 1.9rem;
-  line-height: 2.4rem;
-}
-@mixin h__18-23 {
-  font-size: 1.8rem;
-  line-height: 2.3rem;
+@mixin big {
+  font-size: 7.0em;
+  line-height: 7.2rem;
 }
 @mixin h__16-20 {
   font-size: 1.5rem;
   line-height: 2rem;
 }
-@mixin h__14-18 {
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+@mixin text-big {
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 @mixin text-normal {
   font-size: 1.6rem;
-  line-height: 2rem;
-}
-@mixin h__13-24 {
-  font-size: 1.3rem;
   line-height: 2.4rem;
 }
 @mixin text-small {
   font-size: 1.2rem;
   line-height: 1.5rem;
-}
-@mixin h__10-14 {
-  font-size: 1rem;
-  line-height: 1.4rem;
-}
-@mixin h__9-12 {
-  font-size: 0.9rem;
-  line-height: 1.2rem;
 }

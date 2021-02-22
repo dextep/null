@@ -7,17 +7,7 @@
             </swiper-slide>
           </template>
       </swiper-component>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <section-1></section-1>
   </div>
 </template>
 
@@ -28,12 +18,14 @@ import { SwiperSlide } from 'swiper/vue';
 import firebase from "firebase/app";
 import SliderBox from "@/components/SliderBox/SliderBox.vue";
 import SwiperComponent from "@/components/Swiper/SwiperComponent.vue";
+import Section1 from '../components/Section1/Section1.vue';
 
 export default {
   components: {
     SliderBox,
     SwiperComponent,
     SwiperSlide,
+    Section1,
   },
   data() {
     return {

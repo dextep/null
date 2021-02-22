@@ -27,11 +27,11 @@
         }
     }
     &__title {
-        @include h__40-50;
+        @include h1;
         color: $white;
     }
     &__description {
-        @include h__40-50;
+        @include h1;
         color: $white;
     }
 }
